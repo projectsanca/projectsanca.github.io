@@ -1,0 +1,40 @@
+
+.label {
+  font-weight: bold;
+}
+
+.icon-label {
+  text-align: center;
+}
+
+.icon-container {
+  text-align: center;
+  margin:auto;
+}
+
+.row {
+  padding-bottom: 40px;
+}
+
+.toggle-btn {
+  display: block;
+  text-align: center;
+}
+
+#iconsall, #othericons {
+  margin: auto;
+  text-align: center;
+  clear:both;
+  padding-bottom: 14px;
+  height: 100%;
+}
+.micon {
+  float:left;
+  padding-right: 20px;
+  /*width: 60px;
+  height: 60px;*/
+}
+
+.micon svg path {
+  fill: #333;
+}
