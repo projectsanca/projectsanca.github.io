@@ -43,6 +43,20 @@ twalk_map <- leaflet(walkdata) %>%
                      lng=as.numeric(unlist(walkdata["d_lng"])),
                      lat=as.numeric(unlist(walkdata["d_lat"])),
                      color=~rankpal(walkdata$rank),
+                     label=paste(as.character(unlist(walkdata["cardinal"])),
+                                 " : ",
+                                 as.character(unlist(walkdata["d_name"]))
+                                 ), 
+                     labelOptions = labelOptions(noHide = F, direction = "top",
+                                                 style = list(
+                                                              "color" = "white",
+                                                              "text-shadow" = "black 0 -1px",
+                                                              "background-color" = "transparent",
+                                                              "font-family" = "serif",
+                                                              "font-style" = "italic",
+                                                              "font-size" = "24px",
+                                                              "border-color" = "rgba(0,0,0,0.5)"
+                                                              )),
                      radius=((as.numeric(unlist(walkdata["scale"])))),
                      fillOpacity=0.05
                      ) %>%
@@ -81,7 +95,7 @@ twalk_map <- leaflet(walkdata) %>%
     addLegend(position="topright",
               pal=rankpal,
               values=~(walkdata$rank),
-              title="Destination Counts") %>%
+              title="Destination Count") %>%
     leafem::addMouseCoordinates()
 
 f<-"MAP/twalk_map.html"

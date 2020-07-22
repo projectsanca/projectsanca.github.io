@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,18 +8,15 @@
         <script src="http://d3js.org/d3.v4.min.js"></script>
 
         <link
-                href="http://fonts.googleapis.com/css?family=Raleway:400,300,600"
+                href="https://fonts.googleapis.com/css?family=Raleway:400,300,600"
                 rel="stylesheet"
                 type="text/css"
                 />
-
         <link rel="stylesheet" href="css/normalize.css" type="text/css" />
         <link rel="stylesheet" href="css/skeleton.css" type="text/css" />
 
         <link rel="stylesheet" href="css/github.css" type="text/css" />
         <link rel="stylesheet" href="css/style.css" type="text/css" />
-
-
     </head>
     <body>
         <div id="wrapper">
@@ -44,7 +40,6 @@
                             </br>
                             </br>
                         </div>
-
                         <h1>
                             An InfoVis Utility for Spatial Choice Variety Seekers
                         </h1>
@@ -55,48 +50,67 @@
                     </div>
                     <div class="post">
                         </br>
-                        <h2>Introduction</h2>
+                        <h2>Problem Domain</h2>
                         <h5>
                             <b>Behavioural economics</b>, as the psychology behind economic activities(2),
                             is founded upon the basis of choice(3).
-                            <b>Spatial behavior</b> is defined from the perspective of
-                            aversiveness and indifference to proximity(4), eg. if opportunities within a 
+                            <b>Spatial behavior</b>, as a our problem domain, is defined from the 
+                            perspective of
+                            aversiveness and indifference to proximity(4), eg. if opportunities within a
                             constrained <b>spatial range</b> are evaluated
                             only in terms of attraction attributes, then the individual’s
                             <b>spatial choices</b> may be <b>spatially indifferent</b>(4).
                             </br>
                             </br>
-                            However, there exists a <b>variety-seeking tendency</b>, that is an intrinsic 
-                            tendency to engage a variation in 
-                            behavior as a goal in and of itself, such variations are known as 
-                            <b>variety-seeking behavior</b>(5). 
-                            And yet, <b>spatial indifference</b> is bounded by constraints of willingness 
-                            to traverse space over a certain <b>spatial range</b> to a set of opportunities 
+                            However, there exists a <b>variety-seeking tendency</b>, that is an intrinsic
+                            tendency to engage a variation in
+                            behavior as a goal in and of itself, such variations are known as
+                            <b>variety-seeking behavior</b>(5).
+                            And yet, <b>spatial indifference</b> is bounded by constraints of willingness
+                            to traverse space over a certain <b>spatial range</b> to a set of opportunities
                             that are <b>spatially finite</b>.
-                            </br>
-                            </br>
-                            <!--
-                            In aggregate, regardless of <b>variety-seeking behavior</b>, the set of 
-                            opportunities considered by an individual
-                            when making a <b>spatial choice</b> are <b>spatially finite</b>(4).
-                            </br>
-                            </br>
-                            -->
                         </h5>
+                        </br>
+                        <h2>Philosophy, Motive, Approach & Hypothesis</h2>
+                        <h5>
+                            Our choice of a <b>philosophy</b> is that: <i>"the intuitive grasp of the 
+                                essentials of
+                                a large complex of facts leads to a basic 'law', from which, as a system
+                                of axioms, we may derive conclusions"</i>(7). 
+                            And as such, even that our chosen domain is foreign to us,  
+                            we understand that the key to traverse 
+                            its complex to 
+                            the clarity of the simple, is studying 
+                            its ubiquitous language's(8) most essential of constructs, and that is 
+                            the notion of behavior.
+                            On key <b>motive</b>, and with a software engineering background; 
+                            we address 
+                            an actor class of our 
+                            problem domain with a software artifact, 
+                            to <b>approach</b> our designated notion. 
+                            </br>
+                            </br>
+                            We set our <b>hypothesis</b> as that the economic actor class of spatial 
+                            choice variety 
+                            seekers would  
+                            be better served with a more tailored InfoVis utility other than the popularly 
+                            used 
+                            Google Maps<link>. 
+                        </h5>
+                        </br>
                         <h2>Project Description</h2>
                         <h5>
-                            We introduce twalk, an InfoVis utility, 
-                            intended to serve <b>spatial choice variety seekers</b> in 
-                            visualizing their <b>spatially finite</b> opportunities from 
-                            within a specified <b>spatial range</b> defined in terms of 
+                            We introduce twalk, an InfoVis utility,
+                            intended to serve <b>spatial choice variety seekers</b> in
+                            visualizing their <b>spatially finite</b> opportunities from
+                            within a specified <b>spatial range</b> defined in terms of
                             origin/destination walking duration.
-                            </br>
-                            </br>
                         </h5>
+                        </br>
                         <h2>Project Structure</h2>
                         <h5>
-                            We follow a simple programming style of single-purpose scripts managed 
-                            via make(1).
+                            We follow a simple programming style of single-purpose scripts managed
+                            via a Makefile.
                             <br>
                             <br>
                             <img class="center" src="images/vis.makefile.png" alt="" style="border:1px dotted #cccccc;" /></a>
@@ -104,196 +118,232 @@
                             </br>
                             </br>
                         <script src="https://gist.github.com/openbsd1337/cab8d8452d0cac6dc09ad5223eea0f6a.js"></script>
-                            </br>
-                            </br>
                         </h5>
+                        </br>
                         <h2>
                             Data Acquisition
                         </h2>
                         <h5>
-                            While data acquisition is out of our scope, we needed 
+                            While data acquisition is out of our scope, we needed
                             demo data to demonstrate our project.
-                            Our demo data is sampled from <b>Google's 
-                                Places</b> and <b>MatrixDistance API Endpoints</b>. 
-                            For simplicity, we maintain a wide schema, 
+                            Our demo data is sampled from <b>Google's
+                                Places</b> and <b>MatrixDistance API Endpoints</b>.
+                            For simplicity, we maintain a wide schema,
                             until we reach the visualization stage.
                             <br>
                             e.g. filtered.csv -> cardinal.csv -> stats.csv -> (visualization)
                             <br>
                             <br>
-                            We filter our acquired data by a specified maximum walking duration, as 
-                            a constrain of our <b>spatial range</b> and store it
+                            We filter our acquired data by a specified maximum walking duration, as
+                            a constraint of our <b>spatial range</b> and store it
                             as filtered.csv, while keeping the original data separately.
                             <br>
                             <br>
                             <script src="https://gist.github.com/openbsd1337/9c479cef6d67faa85a717beea5f8a9b9.js"></script>
                             <script src="https://gist.github.com/openbsd1337/e44f89192e1f1ff7dcec919477674377.js"></script>
                         </h5>
-
+                            </br>
                         <h2>
-                            Cardinal Direction Ranking 
+                            Cardinal Direction Ranking
                         </h2>
                         <h5>
-                            First, we used our origin/destinations data to calculate to which 
-                            cardinal direction each destination belongs. 
-                            We used R's GeoSphere 
+                            First, we used our origin/destinations data to calculate to which
+                            cardinal direction each destination belongs.
+                            We used R's GeoSphere
                             <i>bearingRhumb()</i> function.
-                            And we relaxed the cardinal accuracy of the destinations to provide a useful 
+                            And we relaxed the cardinal accuracy of the destinations to provide a useful
                             abstraction of a walking direction choice.
                             </br>
                             <script src="https://gist.github.com/openbsd1337/c587aa57198be59b9e8c2db15d1735ef.js"></script>
-                            We calculate our descriptive statistics of each cardinal e.g. 
-                            standard deviations, means, and coefficient of variations; as for each 
-                            cardinal direction we may represent walking duration spread via CV, 
-                            spatial proximity via the mean and spatial variety via the destination count.
+                            We calculate our descriptive statistics of each cardinal e.g.
+                            standard deviations, means, and coefficient of variations; as for each
+                            cardinal direction we may represent walking duration <b>spread</b> 
+                            via the coefficient of variations,
+                            <b>spatial proximity</b> via the mean and 
+                            <b>spatial variety</b> via the destination count.
                             </br>
                             </br>
-                            We choose to scope our current work to the use of destination counts 
-                            within a specified spatial range at each direction, as a guiding score 
-                            of variety for spatial choice variety seekers.
+                            However, we choose to scope our current work only to the use of destination 
+                            counts
+                            within a specified spatial range at each direction, 
+                            as a guiding score
+                            for spatial variety. 
                             </br>
                             </br>
-<!--
-                            </br>
-                            </br>
-                            Now that we can recommend a walking direction. 
-                            We need to measure the walk duration variability at each direction in order to 
-                            rank our cardinal directions for spatial choice variety seekers. 
-                            The <b>coefficient of variation (CV)</b> was our start, as 
-                            it is to often used to determine the existing variations of different 
-                            variables because it shows the extent of variability in relation to the mean.
-                            </br>
-                            </br>
-                            Yet, CV alone proved to be insufficient as we also need to minimize the 
-                            walking duration of our users while also offering them the highest number of 
-                            destinations, thus we added the inverse of the
-                            mean as well as the total count of destinations to our equation.  
-
-                            Next, we normalized all our quantities(cv for variability, mean for proximity, count 
-                            for variety). And because now they are all of equal weights, we biased our
-                            equation towards variety by the multiplication of a constant.
-                            <b>
-                                Cardinal Direction Score 
-                            </b>equals  
-                            <b>
-                                (1/normalized mean of OD walking durations at the direction)
-                            </b>
-                            + 
-                            <b>
-                                (normalized total count of destinations at the direction * a variety bias constant)
-                            </b>
-                            + 
-                            <b>
-                                (1/OD walking durations normalized CV at the direction), 
-                            </b>
-                            which gives us a score for each direction, 
-                            that we used to rank the directions according to variety bias.
-                            </br>
-                            </br>
--->
                             <script src="https://gist.github.com/openbsd1337/42f364196d46c4f5476dd581a1322ff4.js"></script>
-                            <!--
-                            <script src="https://gist.github.com/openbsd1337/922c7be3d431d040fb4707daf623b858.js"></script>
-                            <script src="https://gist.github.com/openbsd1337/c6574898539b8612c4dd3b9b3fa22017.js"></script>
-                            <script src="https://gist.github.com/openbsd1337/d63b6b0f6685647573012864be9348e9.js"></script>
-                            <script src="https://gist.github.com/openbsd1337/217d2a4e870385aa96701c0667a0b709.js"></script>
-                            -->
-                            <!--
-                            We also realized that our ranking may be suitable for comparing several 
-                            origins and their respective cardinal directions, which could
-                            lead to interesting applications. Nevertheless, we deemed it out of our current
-                            scope. 
-                            -->
                         </h5>
-                        </br>
                         </br>
                         <h2>
                             Information Visualization
                         </h2>
                         <h5>
-                            Data is insufficient for meaningful communication 
+                            Data is insufficient for meaningful communication
                             while information, as data transformed and interpreted within context is.
                             And while <b>Visualization</b> is a <b>cognitive activity</b>, facilitated by
-                            external stimuli from which we build internal mental representations 
+                            external stimuli from which we build internal mental representations
                             of the world (1);
                             <b>Information Visualization</b> is the process that provides a capability,
                             for transforming data into information(1).
                             </br>
                             </br>
-
-                            We note that the more specific the question we are asking, 
-                            the more specific and clear the 
-                            visual result will be(6). And as such our single-purpose utility employs 
+                            We note that the more specific the question we are asking,
+                            the more specific and clear the
+                            visual result will be(6). And as such our single-purpose utility employs
                             minimal visual constructs to deliver its intended answer to the question:
                             </br>
                             </br>
-                            <b>Which walking direction(s) would offer more opportunities for a 
-                                spatial choice 
+                            <b>Which walking direction(s) would offer more opportunities for a
+                                spatial choice
                                 variety seeker?</b>
                             </br>
                             </br>
-                            And to answer, 
-                            our process of transforming data into information 
-                            included the feature use of <b>spatial orientation</b>, 
+                            And to answer,
+                            our process of transforming data into information
+                            included the feature use of <b>spatial orientation</b>,
                             <b>color</b>, <b>size</b>, and <b>user interaction</b>:
                             </br>
                             1. We provided our users with a spatial orientation via the use of a map.
                             </br>
-                            2. We offered a map's legend to color associate a spatial direction with 
+                            2. We offered a map's legend to color associate a spatial direction with
                             destination counts.
-                            <!--
-                            2. We offered a scoring of cardinal directions via a map's legend to associate direction with destination counts.
-                            -->
                             </br>
-                            3. We represented walk duration proximity via size, the bigger the radius 
-                            of a destination circle, the closer it is to origin. 
+                            3. We represented walk duration proximity via size, the bigger the radius
+                            of a destination circle, the closer it is to origin.
                             </br>
                             4. And finally, we offered information on-demand via user's interaction e.g. popup interaction.
                             </br>
                             </br>
                             <img class="center" src="images/twalk.png" alt="" style="border:1px dotted #cccccc;" /></a>
                         </h5>
+                            </br>
+                            <!--
+                        <h2>Evaluation</h2>
+                        <h5>
+                            Stage #1: Data Acquisition
+                            </br>
+                            </br>
+                            Stage #2: Cardinal Direction Ranking 
+                            </br>
+                            </br>
+                            Stage #3: Information Visualization 
 
+                            </br>
+                            </br>
+                            Demo commentary
+                        </h5>
+                            </br>
+                            -->
                         <h2>Conclusion</h2>
                         <h5>
-                            Spatial indifference is bounded by constraints of willingness to traverse 
-                            space over a certain range, and regardless of variety-seeking behavior, 
-                            the set of opportunities considered by an individual when making a 
-                            spatial choice are spatially finite. We employed cardinal directions and 
-                            destination counts to offer, through spatial visual constructs of color and 
-                            size, each walking direction opportunities. 
-                            </br>
-                            </br>
-                            <b>
-                            Information Visualization offers
-                            a much needed aid, and our introduced utility presents useful visualization of 
-                            the spatially finite opportunities for its intended audience.
-                            </b>
-                        </h5>
+                            Spatial indifference is bounded by constraints of willingness to traverse
+                            space over a certain range, and regardless of variety-seeking behavior,
+                            the set of opportunities considered by an individual when making a
+                            spatial choice are spatially finite. We employed cardinal directions and
+                            destination counts to offer, through spatial visual constructs of color and
+                            size, each walking direction opportunities.
 
-                        <h2>Acknowledgment</h2>
+                           
+                                And as we are spatial choice variety seekers ourselves, we find that our 
+                                utility yeilds, 
+                                more than Google Maps, 
+                                a visually instant
+                                answer to the question: 
+                                <i>Which walking direction(s) would offer more opportunities for 
+                                    a spatial choice variety seeker?</i>
+                                and hence we accept our hypothesis.
+                                <b>
+                                    In aggregate,
+                                    Information Visualization offers
+                                    a much needed aid, and our introduced utility presents useful 
+                                    visualization of
+                                    the spatially finite opportunities for its intended audience.
+                                </b>
+                        </h5>
+<!--
+                        <h2>Future Work</h2>
+                        <h5>
+                            During our project we experimented with the idea of having a cardinal
+                            ranking based on a function of: walking duration spread via the coefficient 
+                            of 
+                            variations, spatial proximity via the mean and spatial variety via the 
+                            destination count. 
+                            </br>
+                            We also realized that our ranking may be suitable for comparing several
+                            origins and their respective cardinal directions, which could
+                            lead to interesting applications. Nevertheless, we deemed it out
+                            of our current scope.
+                            An idea that we couldn't conclude due to our project's time constrain.
+                            And yet we are remain interested in its possible applications in 
+                            various domains e.g. real estate.
+                            Therefore we would like to pursue by intiating relevant litreature reviews
+                            in the areas of geostatistics,
+                            spatial analysis, and  
+                            spatial economics.
+                        </h5>
+-->
+</br>
+<h2>Acknowledgment</h2>
                         <h5>
                             We are very grateful to
                             <b>Osafu Augustine Egbon</b> (NUSP: <b>11494792</b>),
-                            an ICMC Statistics PostGrad, for his 
+                            an ICMC Statistics PostGrad, for his
                             enthusiasm and diligence in fulfilling our various statistical inquiries.
                         </h5>
-
+                        </br>
+                        <h2>Resources</h2>
+                        <h5>
+                            1. <a href="
+                            https://developers.google.com/places/web-service/overview
+                            ">
+                                Places API,
+                            </a>
+                            </br>
+                            2. <a href="
+                            https://developers.google.com/maps/documentation/distance-matrix/start
+                            ">
+                                Distance Matrix API
+                            </a>
+                            </br>
+                            3. <a href="
+                            https://www.r-project.org/about.html
+                            ">
+                                R
+                            </a>
+                            </br>
+                            4. <a href="
+                            https://cran.r-project.org/web/packages/geosphere/index.html
+                            ">
+                                GeoSphere
+                            </a>
+                            </br>
+                            5. <a href="
+                            https://man.openbsd.org/make
+                            ">
+                                Make
+                            </a>
+                            </br>
+                            </br>
+                            Please refer to our 
+                            <a href="https://github.com/projectsanca/projectsanca.github.io/tree/master/src">
+                        github page
+                        </a>
+                        for complete sourcecode and collected demo data. 
+                        </h5>
+                        </br>
                         <h2>References</h2>
                         <h5>
                             <b>
                                 (1)
-                                "Introduction to information visualization",
+                                "Introduction to Information Visualization",
                                 Riccardo Mazza,
                                 Springer,
                                 2009
                                 </br>
                             </b>
-
                             <b>
                                 (2)
                                 <b>"Theory of Games and Economic Behavior",
-                                    Oskar Morgenstern, John von Neumann,
+                                    Oskar Morgenstern and John von Neumann,
                                     Princeton University Press,
                                     1944
                                 </b>
@@ -308,7 +358,6 @@
                                 </b>
                                 </br>
                             </b>
-
                             <b>
                                 (4)
                                 <b>
@@ -341,14 +390,25 @@
                                 (7)
                                 <b>
                                     "Building Theories: Heuristics and Hypotheses in Sciences",
-                                    David Danks, Emiliano Ippoliti 
+                                    David Danks and Emiliano Ippoliti,
                                     Springer,
                                     2018
                                 </b>
                                 </br>
                             </b>
+                            <b>
+                                (8)
+                                <b>
+                                    "Domain-driven Design: Tackling Complexity in the Heart of Software",
+                                    Eric Evans,
+                                    Addison Wesley,
+                                    2003
+                                </b>
+                                </br>
+                            </b>
                         </h5>
                     </div>
+                    <!-- https://trac.ffmpeg.org/wiki/Concatenate -->
                     <!--   <script src="js/main.js"></script> -->
     </body>
 </html>
